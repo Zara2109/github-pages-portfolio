@@ -19,4 +19,4 @@ Deploy a static website using GitHub Pages.
 Hosted using GitHub Pages from the main branch.
 
 ## Live Website
-Add your published GitHub Pages URL here.
+https://zara2109.github.io/github-pages-portfolio/
