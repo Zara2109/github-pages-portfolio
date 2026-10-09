@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #f7f8fc;
+    --surface: #ffffff;
+    --text: #20243a;
+    --muted: #697089;
+    --primary: #5845d8;
+    --primary-light: #eeeaff;
+    --border: #e5e7f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.logo span,
+.hero h1 span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-links a:hover,
+.project-card a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    max-width: 1100px;
+    margin: 24px auto 45px;
+    padding: 95px 35px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #eeebff, #ffffff 65%, #e9f2ff);
+    text-align: center;
+}
+
+.eyebrow,
+.section-label,
+.project-number {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.12;
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+.hero-text {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 9px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    background: #4030b0;
+    transform: translateY(-2px);
+}
+
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 28px;
+    scroll-margin-top: 25px;
+}
+
+.section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.25;
+    margin: 12px 0 18px;
+}
+
+.section > p:not(.section-label) {
+    color: var(--muted);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.skills-grid span {
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-card {
+    margin-top: 20px;
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px #20243a0d;
+}
+
+.project-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.project-card p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.project-card .tech-tags {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.project-card a {
+    font-weight: 700;
+}
+
+.contact {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    border-radius: 22px;
+    background: var(--primary-light);
+}
+
+.contact .button {
+    margin-top: 22px;
+}
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 18px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        margin: 10px 14px 25px;
+        padding: 65px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 35px 22px;
+    }
+}
